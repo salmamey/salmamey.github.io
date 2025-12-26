@@ -1,283 +1,41 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <title>Portofolio | Salma Amelia</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<title>Salma | Portfolio</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
 
-    <!-- ===== SIDEBAR ===== -->
-    <aside class="sidebar">
-        <h2 class="logo">MECA</h2>
-       <ul class="menu">
-  <li class="active" data-target="beranda">Beranda</li>
-  <li data-target="profil">Profil</li>
-  <li data-target="resume">Resume</li>
-  <li data-target="portofolio">Portofolio</li>
-  <li data-target="kontak">Kontak</li>
-</ul>
+  <aside class="sidebar">
+    <div class="logo">Salma</div>
+    <a href="index.html" class="active">Beranda</a>
+    <a href="profile.html">Profil</a>
+    <a href="resume.html">Resume</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="contact.html">Kontak</a>
+  </aside>
 
-    </aside>
+  <main class="content">
 
-    <!-- ===== MAIN CONTENT ===== -->
-    <main class="content">
+  <!-- HERO CARD -->
+  <div class="card hero animated-bg">
 
-        <!-- ===== BERANDA ===== -->
-        <section id="beranda" class="page active">
+    <!-- TEKS -->
+    <div>
+      <h1>Hello, I'm<br><span>Salma Amelia</span></h1>
+      <p>Siswi PKL | Rekayasa Perangkat Lunak</p>
 
-            
-
-            <section class="hero">
-                <div class="hero-text">
-                    <p class="hello">Hello, I'm</p>
-                    <h1>Salma<br>Amelia</h1>
-                    <p class="job">Web Developer</p>
-                    <button class="btn-work">WORK WITH ME</button>
-                </div>
-
-                <div class="hero-img">
-                    <img src="images/profile.jpeg" alt="Foto Salma">
-                </div>
-            </section>
-
-        </section>
-
-      <!-- ===== PROFIL ===== -->
-<section id="profil" class="page">
-     <div class="topbar">
-                <a href="cv/cvk.pdf" class="btn">DOWNLOAD CV</a>
-            </div>
-
-
-  <div class="profil-card">
-
-    <!-- TEKS KIRI -->
-    <div class="profil-text">
-      <p class="section-label">Tentang Saya</p>
-      <h2 class="profil-name">Salma<br>Amelia</h2>
-      <h3 class="profil-job">Web Developer</h3>
-
-      <p class="profil-desc">
-        Saya adalah siswi SMK YPC Tasikmalaya jurusan Rekayasa Perangkat Lunak
-        yang tertarik pada pengembangan website dan desain antarmuka.
-      </p>
+      <div style="margin-top:25px; display:flex; gap:15px;">
+        <a href="contact.html" class="btn">Work With Me</a>
+      </div>
     </div>
 
-    <!-- FOTO KANAN -->
-    <div class="profil-img">
+    <!-- FOTO -->
+    <div class="photo-wrapper">
       <img src="images/profile.jpeg" alt="Foto Salma">
     </div>
 
   </div>
-
-</section>
-
-
-    <!-- ===== RESUME ===== -->
-<section id="resume" class="page">
-    <p class="section-label">Resume</p>
-    <h2 class="section-title">Pengalaman & Keahlian</h2>
-
-    <div class="resume-grid">
-
-        <!-- ===== PENDIDIKAN ===== -->
-        <div class="resume-box">
-            <h3><span class="dot"></span> Pendidikan</h3>
-
-            <div class="edu-item">
-                <h4>SMK YPC Tasikmalaya</h4>
-                <p>Rekayasa Perangkat Lunak</p>
-                <span class="year">2022 - 2025</span>
-            </div>
-
-            <div class="edu-item">
-                <h4>MTS AL-FADLLIYAH</h4>
-                <span class="year">2020 - 2023</span>
-            </div>
-
-            <div class="edu-item">
-                <h4>SDN 1 TANJUNGJAYA</h4>
-                <span class="year">2014 - 2020</span>
-            </div>
-
-            <div class="edu-item">
-                <h4>TK Harapan Jaya</h4>
-                <span class="year">2013 - 2014</span>
-            </div>
-
-            <div class="edu-item">
-                <h4>PAUD Al-Kautsar</h4>
-                <span class="year">2012 - 2013</span>
-            </div>
-        </div>
-
-        <!-- ===== BAHASA ===== -->
-        <div class="resume-box">
-            <h3><span class="dot"></span> Bahasa</h3>
-
-            <div class="skill">
-                <div class="skill-title">
-                    <span>Indonesia</span><span>90%</span>
-                </div>
-                <div class="progress">
-                    <div class="progress-bar" style="width:90%"></div>
-                </div>
-            </div>
-
-            <div class="skill">
-                <div class="skill-title">
-                    <span>Sunda</span><span>85%</span>
-                </div>
-                <div class="progress">
-                    <div class="progress-bar" style="width:85%"></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ===== PENGALAMAN KERJA ===== -->
-        <div class="resume-box">
-            <h3><span class="dot"></span> Pengalaman Kerja (PKL)</h3>
-
-            <ul class="experience-list">
-                <li>Membantu pembuatan dan pengelolaan website sederhana</li>
-                <li>Mengembangkan tampilan web menggunakan HTML dan CSS</li>
-                <li>Membantu pembuatan fitur dasar menggunakan PHP</li>
-                <li>Mengelola database sederhana menggunakan MySQL</li>
-                <li>Melakukan pengecekan dan perbaikan error dasar (debugging)</li>
-                <li>Membuat laporan kegiatan PKL secara berkala</li>
-                <li>Bekerja sama dengan tim dan mengikuti SOP perusahaan</li>
-            </ul>
-        </div>
-
-    </div>
-    <div class="resume-grid">
-
-    
-
-   
-
-    <!-- KEAHLIAN (DI SEBELAH PENGALAMAN KERJA) -->
-    <div class="resume-box">
-        <h3><span class="dot"></span> Keahlian</h3>
-
-        <div class="skill">
-            <div class="skill-title">
-                <span>Laravel</span><span>85%</span>
-            </div>
-            <div class="progress">
-                <div class="progress-bar" style="width:85%"></div>
-            </div>
-        </div>
-
-        <div class="skill">
-            <div class="skill-title">
-                <span>MySQL</span><span>85%</span>
-            </div>
-            <div class="progress">
-                <div class="progress-bar" style="width:85%"></div>
-            </div>
-        </div>
-
-        <div class="skill">
-            <div class="skill-title">
-                <span>Flutter</span><span>70%</span>
-            </div>
-            <div class="progress">
-                <div class="progress-bar" style="width:70%"></div>
-            </div>
-        </div>
-
-        <div class="skill">
-            <div class="skill-title">
-                <span>UI / UX Design</span><span>80%</span>
-            </div>
-            <div class="progress">
-                <div class="progress-bar" style="width:80%"></div>
-            </div>
-        </div>
-    </div>
-
-</div>
-
-   
-         
-
-</section>
-
-
-       <!-- ===== PORTOFOLIO ===== -->
-<main class="content">
-    <div class="card">
-      <h3>Portfolio</h3>
-      <h1>Projek Saya</h1>
-
-
-
-  <div class="portfolio-grid">
-
-  <a href="#" class="portfolio-card">
-    <img src="images/iuran warga.png" alt="Website Iuran Warga">
-    <h4>Website Iuran Warga</h4>
-    <p>Sistem pengelolaan iuran warga berbasis web</p>
-  </a>
-
-  <a href="#" class="portfolio-card">
-    <img src="images/profilesekolah.png" alt="Website Profil Sekolah">
-    <h4>Website Profil Sekolah</h4>
-    <p>Website informasi dan profil sekolah</p>
-  </a>
-
-  <a href="#" class="portfolio-card">
-    <img src="images/marketplace.png" alt="Website Marketplace">
-    <h4>Website Marketplace</h4>
-    <p>Website jual beli dengan fitur produk dan checkout</p>
-  </a>
-
-  <a href="#" class="portfolio-card">
-    <img src="images/figma.png" alt="UI/UX Baca News">
-    <h4>UI/UX Figma – Baca News</h4>
-    <p>Desain UI/UX aplikasi baca berita menggunakan Figma</p>
-  </a>
-
-  <!-- Card Baru 1: UI/UX Browse Profil Sekolah -->
-  <a href="#" class="portfolio-card">
-    <img src="images/websekolah.png" alt="UI/UX Browse Profil Sekolah">
-    <h4>UI/UX Figma – Browse Profil Sekolah</h4>
-    <p>Desain antarmuka aplikasi untuk browsing profil sekolah</p>
-  </a>
-
-  <!-- Card Baru 2: Web Portofolio -->
-  <a href="#" class="portfolio-card">
-    <img src="images/webprofile.png" alt="Web Portofolio">
-    <h4>Web Portofolio</h4>
-    <p>Website portofolio pribadi menampilkan projek dan resume</p>
-  </a>
-
-</div>
-
-
-        <!-- ===== KONTAK ===== -->
-        <section id="kontak" class="page">
-            <p class="section-label">Kontak</p>
-            <h2 class="section-title">Hubungi Saya</h2>
-            <p>Email: salma@email.com</p>
-             <p>WhatApp:+62 857 2723 9984</p>
-              <p>Instagram: salmaamelias</p>
-        </section>
-
-        <footer>
-            © 2025 Salma Amelia
-        </footer>
-
-    </main>
-
-</div>
-
-<script src="script.js"></script>
-</body>
-</html>
