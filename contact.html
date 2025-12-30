@@ -1,96 +1,260 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Kontak | Salma</title>
+<meta charset="UTF-8">
+<title>Kontak | Salma Amelia</title>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+<!-- FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- FONT AWESOME (WAJIB biar icon muncul) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- FONT AWESOME -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Poppins,sans-serif;
+}
+
+body{
+  background:#f9f5ff;
+}
+
+/* ===== HEADER ===== */
+header{
+  height:70px;
+  background:#fff;
+  display:flex;
+  justify-content:space-between; /* 🔥 KUNCI */
+  align-items:center;
+  padding:0 30px;
+  border-bottom:1px solid #eee;
+  position:fixed;
+  top:0; left:0; right:0;
+  z-index:999;
+}
+
+/* KIRI */
+.header-left{
+  font-weight:700;
+  font-size:20px;
+  color:#8fe7e0;
+}
+
+/* KANAN */
+.header-right{
+  position:relative;
+}
+
+.menu-btn{
+  background:none;
+  border:none;
+  font-size:22px;
+  cursor:pointer;
+  color:#8fe7e0;
+}
+
+/* ===== DROPDOWN ===== */
+.dropdown-menu{
+  position:absolute;
+  top:45px;
+  right:0;
+  width:170px;
+  background:#fff;
+  border-radius:12px;
+  box-shadow:0 15px 30px rgba(0,0,0,.15);
+  display:none;
+  flex-direction:column;
+  overflow:hidden;
+}
+
+.dropdown-menu a{
+  padding:12px 16px;
+  text-decoration:none;
+  color:#333;
+  transition:.3s;
+}
+
+.dropdown-menu a:hover{
+  background:#8fe7e0;
+  color:#fff;
+}
+
+/* ===== CONTENT ===== */
+.container{
+  padding-top:120px;
+  display:flex;
+  justify-content:center;
+}
+
+.card{
+  background:#fff;
+  padding:40px;
+  border-radius:20px;
+  width:100%;
+  max-width:520px;
+  box-shadow:0 15px 40px rgba(0,0,0,.1);
+}
+
+.card h1{
+  text-align:center;
+  margin-bottom:10px;
+}
+
+.card p{
+  text-align:center;
+  color:#555;
+  margin-bottom:30px;
+}
+
+.contact-list a,
+.alamat{
+  display:flex;
+  align-items:center;
+  gap:15px;
+  padding:14px;
+  border-radius:12px;
+  text-decoration:none;
+  color:#333;
+  margin-bottom:15px;
+  background:#f3f7fa;
+  transition:.3s;
+}
+
+.contact-list a:hover{
+  background:#8fe7e0;
+  color:#fff;
+}
+
+.contact-list i{
+  font-size:24px;
+}
+
+.contact-list span{
+  font-weight:600;
+}
+
+.contact-list small{
+  display:block;
+  font-size:13px;
+  color:#555;
+}
+
+.contact-list a:hover small{
+  color:#fff;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  text-align:center;
+  margin-top:30px;
+  color:#777;
+  font-size:14px;
+}
+</style>
 </head>
+
 <body>
 
+<!-- ===== HEADER ===== -->
+<header>
+  <!-- KIRI -->
+  <div class="header-left">Salma Amelia</div>
+
+  <!-- KANAN -->
+  <div class="header-right">
+    <button class="menu-btn" id="menuBtn">
+      <i class="fas fa-ellipsis-v"></i>
+    </button>
+
+    <div class="dropdown-menu" id="dropdownMenu">
+      <a href="index.html">Home</a>
+      <a href="profile.html">Profil</a>
+      <a href="resume.html">Resume</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Kontak</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== CONTENT ===== -->
 <div class="container">
+  <div class="card">
 
-  <!-- SIDEBAR -->
-  <aside class="sidebar">
-    <div class="logo">Salma</div>
-    <a href="index.html">Beranda</a>
-    <a href="profile.html">Profil</a>
-    <a href="resume.html">Resume</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="contact.html" class="active">Kontak</a>
-  </aside>
+    <h1>Kontak</h1>
+    <p><strong>Hubungi Saya</strong></p>
 
-  <!-- CONTENT -->
-  <main class="content">
-    <div class="card">
+    <div class="contact-list">
 
-      <h1>Kontak</h1>
-      <p><strong>Hubungi Saya</strong></p>
-
-      <div class="contact-list">
-
-        <!-- WHATSAPP -->
-        <a href="https://wa.me/6285727239984" target="_blank">
-          <i class="fab fa-whatsapp"></i>
-          <div>
-            <span>WhatsApp</span>
-            <small>+62 8572 7239 984</small>
-          </div>
-        </a>
-
-        <!-- EMAIL (BUKA GMAIL – PALING AMAN) -->
-        <a href="https://mail.google.com/mail/?view=cm&to=ameliasalma190@gmail.com" target="_blank">
-          <i class="fas fa-envelope"></i>
-          <div>
-            <span>Email</span>
-            <small>ameliasalma190@gmail.com</small>
-          </div>
-        </a>
-
-        <!-- INSTAGRAM -->
-        <a href="https://www.instagram.com/mecaavv?igsh=MXYzdXFhem51emwxMw==" target="_blank">
-          <i class="fab fa-instagram"></i>
-          <div>
-            <span>Instagram</span>
-            <small>@salma</small>
-          </div>
-        </a>
-
-        <!-- LINKEDIN -->
-        <a href="https://www.linkedin.com" target="_blank">
-          <i class="fab fa-linkedin"></i>
-          <div>
-            <span>LinkedIn</span>
-            <small>Salma</small>
-          </div>
-        </a>
-
-        <!-- ALAMAT (TIDAK DIKLIK) -->
-        <div class="alamat">
-          <i class="fas fa-location-dot"></i>
-          <div>
-            <span>Alamat</span>
-            <small>
-              Cibeureum RT 004 RW 001<br>
-              Tanjungjaya<br>
-              Tasikmalaya, Jawa Barat 
-            </small>
-          </div>
+      <a href="https://wa.me/6285727239984" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <div>
+          <span>WhatsApp</span>
+          <small>+62 8572 7239 984</small>
         </div>
+      </a>
 
+      <a href="https://mail.google.com/mail/?view=cm&to=ameliasalma190@gmail.com" target="_blank">
+        <i class="fas fa-envelope"></i>
+        <div>
+          <span>Email</span>
+          <small>ameliasalma190@gmail.com</small>
+        </div>
+      </a>
+
+      <a href="https://www.instagram.com/mecaavv" target="_blank">
+        <i class="fab fa-instagram"></i>
+        <div>
+          <span>Instagram</span>
+          <small>@salma</small>
+        </div>
+      </a>
+
+      <a href="https://www.linkedin.com" target="_blank">
+        <i class="fab fa-linkedin"></i>
+        <div>
+          <span>LinkedIn</span>
+          <small>Salma</small>
+        </div>
+      </a>
+
+      <div class="alamat">
+        <i class="fas fa-location-dot"></i>
+        <div>
+          <span>Alamat</span>
+          <small>
+            Cibeureum RT 004 RW 001<br>
+            Tanjungjaya<br>
+            Tasikmalaya, Jawa Barat
+          </small>
+        </div>
       </div>
 
-      <hr style="margin:30px 0;">
-      <p style="text-align:center;">© 2025 SalmaAmelia</p>
-
     </div>
-  </main>
 
+    <footer>© 2025 Salma Amelia</footer>
+
+  </div>
 </div>
+
+<!-- ===== JS ===== -->
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const dropdown = document.getElementById("dropdownMenu");
+
+menuBtn.addEventListener("click", function(e){
+  e.stopPropagation();
+  dropdown.style.display =
+    dropdown.style.display === "flex" ? "none" : "flex";
+});
+
+document.addEventListener("click", function(){
+  dropdown.style.display = "none";
+});
+</script>
 
 </body>
 </html>
+sss

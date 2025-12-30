@@ -2,40 +2,205 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>Salma | Portfolio</title>
-<link rel="stylesheet" href="style.css">
+<title>Home | Salma Amelia</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Poppins,sans-serif;
+}
+
+body{
+  background:#f9f5ff;
+}
+
+/* ===== TOP BAR ===== */
+.topbar{
+  position:fixed;
+  top:0; left:0; right:0;
+  height:70px;
+  background:#fff;
+  display:flex;
+  justify-content:space-between; /* ← PENTING */
+  align-items:center;
+  padding:0 40px;
+  border-bottom:1px solid #eee;
+  z-index:9999;
+}
+
+/* KIRI */
+.header-left{
+  font-weight:700;
+  font-size:20px;
+  color:#8fe7e0;
+}
+
+/* KANAN */
+.header-right{
+  position:relative;
+}
+
+.menu-btn{
+  background:none;
+  border:none;
+  font-size:26px;
+  cursor:pointer;
+  color:#8fe7e0;
+}
+
+/* ===== DROPDOWN ===== */
+.dropdown-menu{
+  position:absolute;
+  top:45px;
+  right:0;
+  width:170px;
+  background:#fff;
+  border-radius:12px;
+  box-shadow:0 15px 30px rgba(0,0,0,.15);
+  display:none;
+  flex-direction:column;
+  overflow:hidden;
+}
+
+.dropdown-menu a{
+  padding:12px 16px;
+  text-decoration:none;
+  color:#333;
+  transition:.3s;
+}
+
+.dropdown-menu a:hover{
+  background:#8fe7e0;
+  color:#fff;
+}
+
+/* ===== HERO ===== */
+.hero{
+  min-height:100vh;
+  padding:120px 60px 60px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:60px;
+}
+
+.hero-text h1{
+  font-size:48px;
+}
+
+.hero-text span{
+  color:#8fe7e0;
+}
+
+.hero-text p{
+  margin:20px 0;
+  color:#555;
+  line-height:1.7;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:14px 26px;
+  background:#8fe7e0;
+  color:#fff;
+  text-decoration:none;
+  border-radius:12px;
+  font-weight:600;
+  transition:.3s;
+}
+
+.btn:hover{
+  background:#6fd4ce;
+  transform:translateY(-3px);
+}
+
+/* ===== FOTO BULAT ===== */
+.photo-wrapper{
+  width:260px;
+  height:260px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#8fe7e0,#d4e8f0);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  animation:float 4s ease-in-out infinite;
+}
+
+.photo-wrapper img{
+  width:230px;
+  height:230px;
+  border-radius:50%;
+  object-fit:cover;
+  background:#fff;
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-10px);}
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+  .hero{
+    flex-direction:column-reverse;
+    text-align:center;
+  }
+}
+</style>
 </head>
+
 <body>
 
-<div class="container">
+<!-- ===== HEADER ===== -->
+<header class="topbar">
+  <div class="header-left">Salma Amelia</div>
 
-  <aside class="sidebar">
-    <div class="logo">Salma</div>
-    <a href="index.html" class="active">Beranda</a>
-    <a href="profile.html">Profil</a>
-    <a href="resume.html">Resume</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="contact.html">Kontak</a>
-  </aside>
+  <div class="header-right">
+    <button class="menu-btn" id="menuBtn">⋮</button>
 
-  <main class="content">
-
-  <!-- HERO CARD -->
-  <div class="card hero animated-bg">
-
-    <!-- TEKS -->
-    <div>
-      <h1>Hello, I'm<br><span>Salma Amelia</span></h1>
-      <p>Siswi PKL | Rekayasa Perangkat Lunak</p>
-
-      <div style="margin-top:25px; display:flex; gap:15px;">
-        <a href="contact.html" class="btn">Work With Me</a>
-      </div>
+    <div class="dropdown-menu" id="dropdownMenu">
+      <a href="index.html">Home</a>
+      <a href="profile.html">Profil</a>
+      <a href="resume.html">Resume</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Kontak</a>
     </div>
-
-    <!-- FOTO -->
-    <div class="photo-wrapper">
-      <img src="images/profile.jpeg" alt="Foto Salma">
-    </div>
-
   </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>Hello, I’m <span>Salma Amelia</span></h1>
+    <p>REKAYASA PERANGKAT LUNAK</p>
+    <a href="contact.html" class="btn">Work With Me</a>
+  </div>
+
+  <div class="photo-wrapper">
+    <img src="images/profil2.jpeg" alt="Salma Amelia">
+  </div>
+</section>
+
+<!-- ===== JS ===== -->
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const dropdownMenu = document.getElementById("dropdownMenu");
+
+menuBtn.addEventListener("click",function(e){
+  e.stopPropagation();
+  dropdownMenu.style.display =
+    dropdownMenu.style.display==="flex" ? "none" : "flex";
+});
+
+document.addEventListener("click",function(){
+  dropdownMenu.style.display="none";
+});
+</script>
+
+</body>
+</html>

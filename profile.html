@@ -3,75 +3,221 @@
 <head>
 <meta charset="UTF-8">
 <title>Profil | Salma Amelia</title>
-<link rel="stylesheet" href="style.css">
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#f9f5ff;
+}
+
+/* ===== HEADER / DASHBOARD ===== */
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  height:70px;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 40px;
+  border-bottom:1px solid #eee;
+  z-index:1000;
+}
+
+.header-left{
+  font-size:22px;
+  font-weight:700;
+  color:#8fe7e0;
+}
+
+.header-right{
+  position:relative;
+}
+
+.menu-btn{
+  background:none;
+  border:none;
+  font-size:26px;
+  cursor:pointer;
+  color:#8fe7e0;
+}
+
+/* ===== DROPDOWN ===== */
+.dropdown-menu{
+  position:absolute;
+  top:45px;
+  right:0;
+  width:180px;
+  background:#fff;
+  border-radius:14px;
+  box-shadow:0 15px 30px rgba(0,0,0,.15);
+  display:none;
+  flex-direction:column;
+  overflow:hidden;
+}
+
+.dropdown-menu a{
+  padding:14px 18px;
+  text-decoration:none;
+  color:#333;
+  transition:.3s;
+}
+
+.dropdown-menu a:hover{
+  background:#8fe7e0;
+  color:#fff;
+}
+
+/* ===== CONTENT ===== */
+.container{
+  padding-top:110px;
+  padding-left:40px;
+  padding-right:40px;
+}
+
+.card{
+  background:#fff;
+  border-radius:20px;
+  padding:50px;
+}
+
+/* ===== PROFILE ===== */
+.profile-wrap{
+  display:flex;
+  gap:50px;
+  margin-top:35px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+
+.profile-photo{
+  width:220px;
+  height:220px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#8fe7e0,#c5dfdd);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.profile-photo img{
+  width:190px;
+  height:190px;
+  border-radius:50%;
+  object-fit:cover;
+  background:#fff;
+}
+
+.profile-data p{
+  display:flex;
+  gap:20px;
+  margin-bottom:10px;
+}
+
+.profile-data span{
+  width:140px;
+  font-weight:600;
+  color:#8fe7e0;
+}
+
+/* ===== DESKRIPSI ===== */
+.profile-desc{
+  margin-top:40px;
+}
+
+.desc-card{
+  background:#f3e8ff;
+  border-left:6px solid #8fe7e0;
+  padding:20px 25px;
+  border-radius:12px;
+}
+
+.desc-card p{
+  line-height:1.8;
+  color:#4b3b8f;
+}
+</style>
 </head>
+
 <body>
 
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="header-left">Salma Amelia</div>
+
+  <div class="header-right">
+    <button class="menu-btn" id="menuBtn">⋮</button>
+
+    <div class="dropdown-menu" id="dropdownMenu">
+      <a href="profile.html">Profil</a>
+      <a href="resume.html">Resume</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Kontak</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== CONTENT ===== -->
 <div class="container">
+  <div class="card">
 
-  <!-- SIDEBAR -->
-  <aside class="sidebar">
-    <div class="logo">Salma</div>
-    <a href="index.html">Beranda</a>
-    <a href="profile.html" class="active">Profil</a>
-    <a href="resume.html">Resume</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="contact.html">Kontak</a>
-  </aside>
+    <h3 style="color:#eebcf3;">Tentang Saya</h3>
+    <h1>Software Engineering</h1>
 
-  <!-- CONTENT -->
-  <main class="content">
-    <div class="card">
-
-      <!-- JUDUL -->
-      <h3 style="color:#eebcf3;">Tentang Saya</h3>
-      <h1>Software Engineering</h1>
-
-      <!-- PROFIL -->
-      <div class="profile-wrap">
-
-        <!-- FOTO DAN DOWNLOAD CV -->
-        <div class="profile-photo-section">
-          <div class="profile-photo">
-            <img src="images/profile.jpeg" alt="Foto Salma">
-          </div>
-
-          <!-- DOWNLOAD CV di bawah foto -->
-          <div class="download-cv">
-            <a href="images/profile.jpeg" download class="btn-cv">
-              📄 Download CV
-            </a>
-          </div>
-        </div>
-
-        <!-- DATA DIRI -->
-        <div class="profile-data">
-          <p><span>Nama</span>Salma Amelia</p>
-          <p><span>Tanggal Lahir</span>22 September 2007</p>
-          <p><span>Email</span>ameliasalma190@gmail.com.com</p>
-          <p><span>No. HP</span>085727239984</p>
-          <p><span>Alamat</span>Tasikmalaya, Cibeureum</p>
-          <p><span>Kebangsaan</span>Indonesia</p>
-        </div>
-
+    <div class="profile-wrap">
+      <div class="profile-photo">
+        <img src="images/profil2.jpeg" alt="Foto Salma">
       </div>
-<!-- DESKRIPSI -->
-<div class="profile-desc">
 
-  <div class="desc-card">
-    <p>
-      Saya adalah pribadi yang menekuni bidang Rekayasa Perangkat Lunak(RPL)
-      <strong>dengan ketertarikan pada pengembangan</strong>
-      aplikasi dan website.Memahami dasar pemrograman,perancangan
-      antarmukapengguna,serta pengolahan data.Siap mengembangkan kemampuan 
-      dan beradaptasi dengan teknologi baru.
-    </p> 
+      <div class="profile-data">
+        <p><span>Nama</span> Salma Amelia</p>
+        <p><span>Tanggal Lahir</span> 22 September 2007</p>
+        <p><span>Email</span> ameliasalma190@gmail.com</p>
+        <p><span>No. HP</span> 085727239984</p>
+        <p><span>Alamat</span> Tasikmalaya, Cibeureum</p>
+        <p><span>Kebangsaan</span> Indonesia</p>
+      </div>
+    </div>
+
+    <div class="profile-desc">
+      <div class="desc-card">
+        <p>
+          Saya menekuni bidang Rekayasa Perangkat Lunak (RPL) dengan ketertarikan
+          pada pengembangan aplikasi dan website, memahami dasar pemrograman,
+          perancangan antarmuka pengguna, serta pengolahan data.
+        </p>
+      </div>
+    </div>
+
   </div>
-
-
-  </div>
-
- 
-  </div>
-
 </div>
+
+<!-- ===== JS ===== -->
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const dropdownMenu = document.getElementById("dropdownMenu");
+
+menuBtn.addEventListener("click", function(e){
+  e.stopPropagation();
+  dropdownMenu.style.display =
+    dropdownMenu.style.display === "flex" ? "none" : "flex";
+});
+
+document.addEventListener("click", function(){
+  dropdownMenu.style.dissplay = "none";
+});
+</script>
+
+</body>
+</html>

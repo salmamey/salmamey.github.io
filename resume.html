@@ -3,113 +3,262 @@
 <head>
 <meta charset="UTF-8">
 <title>Resume | Salma Amelia</title>
-<link rel="stylesheet" href="style.css">
+
+<!-- FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f9f5ff;
+}
+
+/* ================= TOP BAR ================= */
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  border-bottom: 1px solid #eee;
+  z-index: 9999; /* PENTING */
+}
+
+.top-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #8fe7e0;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #8fe7e0;
+}
+
+/* ================= DROPDOWN ================= */
+.dropdown-menu {
+  position: absolute;
+  top: 70px;
+  right: 40px;
+  width: 180px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 10000; /* LEBIH TINGGI */
+}
+
+.dropdown-menu a {
+  padding: 14px 18px;
+  text-decoration: none;
+  color: #333;
+  transition: .3s;
+}
+
+.dropdown-menu a:hover {
+  background: #8fe7e0;
+  color: #fff;
+}
+
+/* ================= CONTENT ================= */
+.content {
+  max-width: 1000px;
+  margin: auto;
+  padding: 120px 30px 40px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 50px;
+  animation: fadeUp .6s ease;
+}
+
+.subtitle {
+  color: #777;
+  margin-bottom: 30px;
+}
+
+/* ================= RESUME ================= */
+.resume-section {
+  margin-top: 35px;
+}
+
+.resume-section h3 {
+  color: #8fe7e0;
+  margin-bottom: 15px;
+}
+
+.resume-item {
+  background: #f3e8ff;
+  border-left: 5px solid #8fe7e0;
+  padding: 15px 20px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.resume-item span {
+  font-size: 13px;
+  color: #8fe7e0;
+}
+
+.resume-item p {
+  margin-top: 8px;
+  line-height: 1.6;
+}
+
+/* SKILL */
+.skill {
+  margin-bottom: 15px;
+}
+
+.skill span {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.bar {
+  background: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.bar div {
+  height: 10px;
+  background: #8fe7e0;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
 </head>
+
 <body>
 
-<div class="container">
+<!-- ================= TOP BAR ================= -->
+<header class="topbar">
+  <span class="top-name">Salma Amelia</span>
 
-  <!-- SIDEBAR -->
-  <aside class="sidebar">
-    <div class="logo">Salma</div>
-    <a href="index.html">Beranda</a>
-    <a href="profile.html">Profil</a>
-    <a href="resume.html" class="active">Resume</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="contact.html">Kontak</a>
-  </aside>
+  <button class="menu-btn" id="menuBtn">⋮</button>
 
-  <!-- CONTENT -->
-  <main class="content">
-    <div class="card">
-
-      <h1>Resume</h1>
-      <p class="subtitle">Pengalaman & Keahlian</p>
-
-      <!-- PENDIDIKAN -->
-      <div class="resume-section">
-        <h3>Pendidikan</h3>
-
-        <div class="resume-item">
-          <h4>SMK YPC Tasikmalaya – Rekayasa Perangkat Lunak</h4>
-          <span>2023 – 2026</span>
-        </div>
-
-        <div class="resume-item">
-          <h4>MTS AL-FADLLIYAH</h4>
-          <span>2020 – 2023</span>
-        </div>
-
-       
-
-      <!-- PENGALAMAN -->
-      <div class="resume-section">
-        <h3>Pengalaman</h3>
-
-        <div class="resume-item">
-          <h4>Proyek Sekolah</h4>
-          <p>
-          -Membantu pembuatan dan pengolahan website sederhana
-          -Mengembangkan tampilan web menggunakan HTML dan css
-          -Membantu pembuatan fitur dasar menggunakan PHP
-          -Mengelola database sederhana menggunakan SQL 
-          -Melakukan pengecekan dan perbaikan error dasar(debugging)
-          -Membuat laporan kegiatan PKL secara berkala
-          -Bekerja sama dengan tim dan mengikuti SOP perusahaan
-          </p>
-        </div>
-      </div>
-
-      <!-- BAHASA -->
-      <div class="resume-section">
-        <h3>Bahasa</h3>
-
-        <div class="skill">
-          <span>Indonesia</span>
-          <div class="bar"><div style="width:99,99%"></div></div>
-        </div>
-
-     
-        <div class="skill">
-          <span>Inggris</span>
-          <div class="bar"><div style="width:50%"></div></div>
-        </div>
-      </div>
-
-      <!-- KEAHLIAN -->
-      <div class="resume-section">
-        <h3>Keahlian</h3>
-
-        <div class="skill">
-          <span>HTML / CSS</span>
-          <div class="bar"><div style="width:70%"></div></div>
-        </div>
-
-        <div class="skill">
-          <span>JavaScript Dasar</span>
-          <div class="bar"><div style="width:50%"></div></div>
-        </div>
-
-        <div class="skill">
-          <span>PHP & Laravel Dasar</span>
-          <div class="bar"><div style="width:50%"></div></div>
-        </div>
-      </div>
-        <div class="skill">
-    <span>MySQL</span>
-    <div class="bar"><div style="width:60%"></div></div>
+  <div class="dropdown-menu" id="dropdownMenu">
+    <a href="#">Profil</a>
+    <a href="#">Resume</a>
+    <a href="#">Portfolio</a>
+    <a href="#">Kontak</a>
   </div>
+</header>
 
+<!-- ================= CONTENT ================= -->
+<main class="content">
+  <div class="card">
 
-     
+    <h1>Resume</h1>
+    <p class="subtitle">Pengalaman & Keahlian</p>
 
-      <hr style="margin:30px 0;">
-      <p style="text-align:center;">© 2025 SalmaAmelia</p>
+    <div class="resume-section">
+      <h3>Pendidikan</h3>
 
+      <div class="resume-item">
+        <h4>SMK YPC Tasikmalaya – Rekayasa Perangkat Lunak</h4>
+        <span>2023 – 2026</span>
+      </div>
+
+      <div class="resume-item">
+        <h4>MTS AL-FADLLIYAH</h4>
+        <span>2020 – 2023</span>
+      </div>
     </div>
-  </main>
 
-</div>
+    <div class="resume-section">
+      <h3>Pengalaman</h3>
+
+      <div class="resume-item">
+        <h4>Proyek Sekolah / PKL</h4>
+        <p>
+          • Website sederhana<br>
+          • HTML, CSS, PHP dasar<br>
+          • Database MySQL<br>
+          • Debugging error<br>
+          • Kerja tim
+          • (2023-2026)
+        </p>
+      </div>
+    </div>
+
+    <div class="resume-section">
+      <h3>Bahasa</h3>
+
+      <div class="skill">
+        <span>Indonesia</span>
+        <div class="bar"><div style="width:100%"></div></div>
+      </div>
+
+      
+
+    <div class="resume-section">
+      <h3>Keahlian</h3>
+
+      <div class="skill">
+        <span>HTML / CSS</span>
+        <div class="bar"><div style="width:70%"></div></div>
+      </div>
+
+      <div class="skill">
+        <span>JavaScript Dasar</span>
+        <div class="bar"><div style="width:50%"></div></div>
+      </div>
+
+      <div class="skill">
+        <span>PHP & MySQL</span>
+        <div class="bar"><div style="width:60%"></div></div>
+      </div>
+    </div>
+
+    <hr style="margin:30px 0;">
+    <p style="text-align:center;">© 2025 Salma Amelia</p>
+
+  </div>
+</main>
+
+<!-- ================= JS ================= -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const menuBtn = document.getElementById("menuBtn");
+  const dropdownMenu = document.getElementById("dropdownMenu");
+
+  menuBtn.addEventListener("click", function (e) {
+    e.stopPropagation();
+    dropdownMenu.style.display =
+      dropdownMenu.style.display === "flex" ? "none" : "flex";
+  });
+
+  document.addEventListener("click", function () {
+    dropdownMenu.style.display = "none";
+  });
+});
+</script>
 
 </body>
 </html>
