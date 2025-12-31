@@ -4,260 +4,231 @@
 <meta charset="UTF-8">
 <title>Resume | Salma Amelia</title>
 
-<!-- FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-/* ================= RESET ================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Poppins,sans-serif;
 }
 
-body {
-  background: #f9f5ff;
+body{background:#f9f5ff}
+
+/* ===== HEADER ===== */
+.topbar{
+  position:fixed;
+  top:0;left:0;right:0;
+  height:70px;
+  background:#fff;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 40px;
+  border-bottom:1px solid #eee;
+  z-index:9999;
 }
 
-/* ================= TOP BAR ================= */
-.topbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 70px;
-  background: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 40px;
-  border-bottom: 1px solid #eee;
-  z-index: 9999; /* PENTING */
+.top-name{font-weight:700;font-size:18px;color:#8fe7e0}
+.menu-btn{background:none;border:none;font-size:28px;cursor:pointer;color:#8fe7e0}
+
+.dropdown-menu{
+  position:absolute;
+  top:70px;right:40px;
+  width:180px;
+  background:#fff;
+  border-radius:14px;
+  box-shadow:0 15px 30px rgba(0,0,0,.15);
+  display:none;
+  flex-direction:column;
 }
 
-.top-name {
-  font-size: 18px;
-  font-weight: 700;
-  color: #8fe7e0;
+.dropdown-menu a{
+  padding:14px 18px;
+  text-decoration:none;
+  color:#333;
+}
+.dropdown-menu a:hover{background:#8fe7e0;color:#fff}
+
+/* ===== CONTENT ===== */
+.content{
+  max-width:1000px;
+  margin:auto;
+  padding:120px 30px 40px;
 }
 
-.menu-btn {
-  background: none;
-  border: none;
-  font-size: 28px;
-  cursor: pointer;
-  color: #8fe7e0;
+.card{
+  background:#fff;
+  border-radius:20px;
+  padding:50px;
 }
 
-/* ================= DROPDOWN ================= */
-.dropdown-menu {
-  position: absolute;
-  top: 70px;
-  right: 40px;
-  width: 180px;
-  background: #ffffff;
-  border-radius: 14px;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-  display: none;
-  flex-direction: column;
-  overflow: hidden;
-  z-index: 10000; /* LEBIH TINGGI */
+/* ===== SECTION ===== */
+.section{margin-top:35px}
+.section h3{color:#8fe7e0;margin-bottom:15px}
+
+.item{
+  background:#f3e8ff;
+  border-left:5px solid #8fe7e0;
+  padding:15px 20px;
+  border-radius:12px;
+  margin-bottom:15px;
 }
 
-.dropdown-menu a {
-  padding: 14px 18px;
-  text-decoration: none;
-  color: #333;
-  transition: .3s;
+.item span{font-size:13px;color:#8fe7e0}
+
+/* ===== CHART ===== */
+.chart-wrapper{
+  display:flex;
+  margin-top:30px;
 }
 
-.dropdown-menu a:hover {
-  background: #8fe7e0;
-  color: #fff;
+.y-axis{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  height:250px;
+  margin-right:15px;
+  font-size:13px;
+  color:#666;
 }
 
-/* ================= CONTENT ================= */
-.content {
-  max-width: 1000px;
-  margin: auto;
-  padding: 120px 30px 40px;
+.chart{
+  display:flex;
+  align-items:flex-end;
+  gap:30px;
+  height:250px;
+  padding:10px 20px;
+  border-left:2px solid #ccc;
+  border-bottom:2px solid #ccc;
 }
 
-.card {
-  background: #fff;
-  border-radius: 20px;
-  padding: 50px;
-  animation: fadeUp .6s ease;
+.chart-item{width:70px;text-align:center}
+
+.chart-bar{
+  width:100%;
+  background:#8fe7e0;
+  border-radius:10px 10px 0 0;
 }
 
-.subtitle {
-  color: #777;
-  margin-bottom: 30px;
-}
-
-/* ================= RESUME ================= */
-.resume-section {
-  margin-top: 35px;
-}
-
-.resume-section h3 {
-  color: #8fe7e0;
-  margin-bottom: 15px;
-}
-
-.resume-item {
-  background: #f3e8ff;
-  border-left: 5px solid #8fe7e0;
-  padding: 15px 20px;
-  border-radius: 12px;
-  margin-bottom: 15px;
-}
-
-.resume-item span {
-  font-size: 13px;
-  color: #8fe7e0;
-}
-
-.resume-item p {
-  margin-top: 8px;
-  line-height: 1.6;
-}
-
-/* SKILL */
-.skill {
-  margin-bottom: 15px;
-}
-
-.skill span {
-  display: block;
-  margin-bottom: 6px;
-  font-weight: 600;
-}
-
-.bar {
-  background: #eee;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.bar div {
-  height: 10px;
-  background: #8fe7e0;
-}
-
-/* ================= ANIMATION ================= */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+.chart-label{
+  margin-top:10px;
+  font-weight:600;
+  font-size:14px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- ================= TOP BAR ================= -->
 <header class="topbar">
   <span class="top-name">Salma Amelia</span>
-
   <button class="menu-btn" id="menuBtn">⋮</button>
 
   <div class="dropdown-menu" id="dropdownMenu">
-    <a href="#">Profil</a>
-    <a href="#">Resume</a>
-    <a href="#">Portfolio</a>
-    <a href="#">Kontak</a>
+    <a href="profile.html">Profil</a>
+    <a href="resume.html">Resume</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="contact.html">Kontak</a>
   </div>
 </header>
 
-<!-- ================= CONTENT ================= -->
 <main class="content">
-  <div class="card">
+<div class="card">
 
-    <h1>Resume</h1>
-    <p class="subtitle">Pengalaman & Keahlian</p>
+<h1>Resume</h1>
+<p>Pengalaman & Keahlian</p>
 
-    <div class="resume-section">
-      <h3>Pendidikan</h3>
+<!-- Pendidikan -->
+<div class="section">
+<h3>Pendidikan</h3>
 
-      <div class="resume-item">
-        <h4>SMK YPC Tasikmalaya – Rekayasa Perangkat Lunak</h4>
-        <span>2023 – 2026</span>
-      </div>
+<div class="item">
+<h4>SMK YPC Tasikmalaya – RPL</h4>
+<span>2023 – 2026</span>
+</div>
 
-      <div class="resume-item">
-        <h4>MTS AL-FADLLIYAH</h4>
-        <span>2020 – 2023</span>
-      </div>
-    </div>
+<div class="item">
+<h4>MTS AL-FADLLIYAH</h4>
+<span>2020 – 2023</span>
+</div>
+</div>
 
-    <div class="resume-section">
-      <h3>Pengalaman</h3>
+<!-- Pengalaman -->
+<div class="section">
+<h3>Pengalaman</h3>
 
-      <div class="resume-item">
-        <h4>Proyek Sekolah / PKL</h4>
-        <p>
-          • Website sederhana<br>
-          • HTML, CSS, PHP dasar<br>
-          • Database MySQL<br>
-          • Debugging error<br>
-          • Kerja tim
-          • (2023-2026)
-        </p>
-      </div>
-    </div>
+<div class="item">
+<h4>Proyek Sekolah / PKL</h4>
+<p>
+• Website sederhana<br>
+• HTML & CSS<br>
+• PHP & MySQL<br>
+• Debugging<br>
+• Kerja tim (2023–2026)
+</p>
+</div>
+</div>
 
-    <div class="resume-section">
-      <h3>Bahasa</h3>
+<!-- Bahasa -->
+<div class="section">
+<h3>Bahasa</h3>
 
-      <div class="skill">
-        <span>Indonesia</span>
-        <div class="bar"><div style="width:100%"></div></div>
-      </div>
+<div class="item">Indonesia – Aktif</div>
+<div class="item">Inggris – Dasar</div>
+</div>
 
-      
+<!-- Skill Chart -->
+<div class="section">
+<h3>Keahlian</h3>
 
-    <div class="resume-section">
-      <h3>Keahlian</h3>
+<div class="chart-wrapper">
 
-      <div class="skill">
-        <span>HTML / CSS</span>
-        <div class="bar"><div style="width:70%"></div></div>
-      </div>
+<div class="y-axis">
+<span>100%</span>
+<span>75%</span>
+<span>50%</span>
+<span>25%</span>
+<span>0%</span>
+</div>
 
-      <div class="skill">
-        <span>JavaScript Dasar</span>
-        <div class="bar"><div style="width:50%"></div></div>
-      </div>
+<div class="chart">
 
-      <div class="skill">
-        <span>PHP & MySQL</span>
-        <div class="bar"><div style="width:60%"></div></div>
-      </div>
-    </div>
+<div class="chart-item">
+<div class="chart-bar" style="height:175px"></div>
+<div class="chart-label">HTML/CSS</div>
+</div>
 
-    <hr style="margin:30px 0;">
-    <p style="text-align:center;">© 2025 Salma Amelia</p>
+<div class="chart-item">
+<div class="chart-bar" style="height:125px"></div>
+<div class="chart-label">JavaScript</div>
+</div>
 
-  </div>
+<div class="chart-item">
+<div class="chart-bar" style="height:150px"></div>
+<div class="chart-label">PHP/MySQL</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<hr style="margin:30px 0">
+<p style="text-align:center">© 2025 Salma Amelia</p>
+
+</div>
 </main>
 
-<!-- ================= JS ================= -->
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const menuBtn = document.getElementById("menuBtn");
-  const dropdownMenu = document.getElementById("dropdownMenu");
+const btn=document.getElementById("menuBtn");
+const menu=document.getElementById("dropdownMenu");
 
-  menuBtn.addEventListener("click", function (e) {
-    e.stopPropagation();
-    dropdownMenu.style.display =
-      dropdownMenu.style.display === "flex" ? "none" : "flex";
-  });
-
-  document.addEventListener("click", function () {
-    dropdownMenu.style.display = "none";
-  });
+btn.addEventListener("click",e=>{
+  e.stopPropagation();
+  menu.style.display = menu.style.display==="flex" ? "none" : "flex";
 });
+document.addEventListener("click",()=>menu.style.display="none");
 </script>
 
 </body>
