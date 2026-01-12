@@ -30,8 +30,20 @@ body{background:#f9f5ff}
   z-index:9999;
 }
 
-.top-name{font-weight:700;font-size:18px;color:#8fe7e0}
-.menu-btn{background:none;border:none;font-size:28px;cursor:pointer;color:#8fe7e0}
+.top-name{
+  font-weight:700;
+  font-size:18px;
+  color:#8fe7e0;
+}
+
+/* ⬇️ HANYA BAGIAN INI YANG DIBENARKAN */
+.menu-btn{
+  background:none;
+  border:none;
+  font-size:32px;   /* diperbesar agar jelas */
+  cursor:pointer;
+  color:#000;       /* hitam */
+}
 
 .dropdown-menu{
   position:absolute;
@@ -49,7 +61,10 @@ body{background:#f9f5ff}
   text-decoration:none;
   color:#333;
 }
-.dropdown-menu a:hover{background:#8fe7e0;color:#fff}
+.dropdown-menu a:hover{
+  background:#8fe7e0;
+  color:#fff;
+}
 
 /* ===== CONTENT ===== */
 .content{
@@ -141,7 +156,6 @@ body{background:#f9f5ff}
 <h1>Resume</h1>
 <p>Pengalaman & Keahlian</p>
 
-<!-- Pendidikan -->
 <div class="section">
 <h3>Pendidikan</h3>
 
@@ -156,7 +170,6 @@ body{background:#f9f5ff}
 </div>
 </div>
 
-<!-- Pengalaman -->
 <div class="section">
 <h3>Pengalaman</h3>
 
@@ -172,20 +185,16 @@ body{background:#f9f5ff}
 </div>
 </div>
 
-<!-- Bahasa -->
 <div class="section">
 <h3>Bahasa</h3>
-
 <div class="item">Indonesia – Aktif</div>
 <div class="item">Inggris – Dasar</div>
 </div>
 
-<!-- Skill Chart -->
 <div class="section">
 <h3>Keahlian</h3>
 
 <div class="chart-wrapper">
-
 <div class="y-axis">
 <span>100%</span>
 <span>75%</span>
@@ -195,7 +204,6 @@ body{background:#f9f5ff}
 </div>
 
 <div class="chart">
-
 <div class="chart-item">
 <div class="chart-bar" style="height:175px"></div>
 <div class="chart-label">HTML/CSS</div>
@@ -210,7 +218,6 @@ body{background:#f9f5ff}
 <div class="chart-bar" style="height:150px"></div>
 <div class="chart-label">PHP/MySQL</div>
 </div>
-
 </div>
 </div>
 </div>

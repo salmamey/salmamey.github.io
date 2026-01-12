@@ -27,7 +27,7 @@ header{
   height:70px;
   background:#fff;
   display:flex;
-  justify-content:space-between; /* 🔥 KUNCI */
+  justify-content:space-between;
   align-items:center;
   padding:0 30px;
   border-bottom:1px solid #eee;
@@ -48,12 +48,13 @@ header{
   position:relative;
 }
 
+/* ⬇️ HANYA BAGIAN INI YANG DIUBAH */
 .menu-btn{
   background:none;
   border:none;
-  font-size:22px;
+  font-size:28px;   /* diperbesar */
   cursor:pointer;
-  color:#8fe7e0;
+  color:#000;       /* hitam */
 }
 
 /* ===== DROPDOWN ===== */
@@ -160,10 +161,8 @@ footer{
 
 <!-- ===== HEADER ===== -->
 <header>
-  <!-- KIRI -->
   <div class="header-left">Salma Amelia</div>
 
-  <!-- KANAN -->
   <div class="header-right">
     <button class="menu-btn" id="menuBtn">
       <i class="fas fa-ellipsis-v"></i>
@@ -239,7 +238,6 @@ footer{
   </div>
 </div>
 
-<!-- ===== JS ===== -->
 <script>
 const menuBtn = document.getElementById("menuBtn");
 const dropdown = document.getElementById("dropdownMenu");
